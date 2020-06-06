@@ -1,0 +1,39 @@
+<!-- 
+	created by : Hemin Patel
+ -->
+ <div style="height: 100%;">
+<mat-toolbar color="accent">
+  <button mat-icon-button (click)="drawer.toggle()" *ngIf="isLogin()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Angular 9 demo with Angular Material & Redux
+</mat-toolbar>
+<mat-drawer-container hasBackdrop="over"   style="height: 100%;"  >
+  <mat-drawer #drawer mode="true" width="170px">
+    <mat-list >
+      <div mat-subheader></div>
+      <mat-divider></mat-divider>
+      <mat-list-item class="active-menu" [routerLinkActive]="['active-cust-nav']" routerLink="home" (click)="drawer.close()">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <div mat-line>Home</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="active-menu" [routerLinkActive]="['active-cust-nav']" routerLink="user-management" (click)="drawer.close()">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <div mat-line>User Manangement</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="active-menu" (click)="drawer.close()" (click)="logout()" >
+        <mat-icon mat-list-icon>power_settings_new</mat-icon>
+        <div mat-line>Logout</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content  >
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+</div>
