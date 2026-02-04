@@ -26,7 +26,7 @@
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "^9.0.0",
     "@ngrx/store": "^9.0.0",
-    "angular-datatables": "^9.0.2",
+    "angular-datatables": "^12.0.1",
     "bcrypt-nodejs": "0.0.3",
     "cors": "^2.8.5",
     "datatables.net": "^1.10.21",
